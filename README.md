@@ -54,7 +54,7 @@ To use the `MyContract` smart contract, follow these steps:
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENCE](https://github.com/Kayleexx/Metacrafters-assessments/blob/main/ETH%20%2B%20AVAX%20PROOF/Project/LICENCE) file for details.
+This project is licensed under the MIT License. See the [LICENCE]((https://github.com/21BCS7009/MetacrafterETH-AVAXPROOF/blob/main/LICENCE)) file for details.
 
 ## Credits
 
