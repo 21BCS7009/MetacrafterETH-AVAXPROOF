@@ -27,7 +27,7 @@ DegenToken is an ERC20 token contract deployed on the Avalanche network. It prov
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENCE](https://github.com/Kayleexx/Metacrafters-assessments/blob/main/ETH%20%2B%20AVAX%20PROOF/Project/LICENCE) file for details.
+This project is licensed under the MIT License. See the [LICENCE](https://github.com/21BCS7009/MetacrafterETH-AVAXPROOF/blob/main/Types%20of%20Functions%20-%20ETH%20%2B%20AVAX/LICENCE) file for details.
 
 ## Credits
 
