@@ -1,4 +1,33 @@
-# DegenToken Contract
+# Metacrafters Project 
+
+## Prerequisites
+
+Before running the smart contract, make sure you have the following prerequisites installed:
+
+- Solidity compiler (version 0.8.0)
+- Ethereum development environment (e.g., Remix, Truffle, Hardhat)
+
+## Getting Started
+
+Follow the steps below to get started with the `DegenToken` smart contract:
+
+1. Fork the starter template project
+2. Create the ERC-20 token
+   1. Set the name to “Degen”
+   2. Set the symbol to “DGN”
+3. Test the smart-contract (All tests should pass)
+4. Deploy the contract to Avalanche Fuji Testnet
+5. Test on testnet (All tests should pass)
+6. Verify the smart-contract on Snowtrace
+7. Share the smart-contract with us!
+
+## Contract Details
+
+- SPDX-License-Identifier: MIT
+- Solidity Version: ^0.8.18
+
+### Description
+### DegenToken Contract
 
 The DegenToken contract is an ERC20 token smart contract that enables various functionalities for players in the Degen Gaming platform. The contract is designed to provide the following features:
 
@@ -12,12 +41,8 @@ The DegenToken contract is an ERC20 token smart contract that enables various fu
 
 - Burning tokens: Any token holder can burn their own tokens if they are no longer needed. The `burnTokens` function allows token holders to burn a specific amount of tokens from their own balance.
 
-## Contract Details
 
-- SPDX-License-Identifier: MIT
-- Solidity Version: ^0.8.18
-
-## Functions
+### Functions
 
 ### mint
 
@@ -67,6 +92,16 @@ function redeemTokens(uint choice) external payable
 
 The `redeemTokens` function allows players to redeem tokens for items in the in-game store. Players need to provide the `choice` parameter, representing the sequence number of the desired item to redeem. The function checks the player's token balance and verifies if it is sufficient for the selected item. If the conditions are met, it transfers the corresponding token value to the contract owner.
 
-## Author
-  
-Moshahid Raza
+
+## License
+
+This project is licensed under the MIT License. See the [LICENCE](https://github.com/21BCS7009/MetacrafterETH-AVAXPROOF/blob/main/LICENCE) file for details.
+
+## Credits
+
+This project is a solution to the project task provided by MetaCrafters.
+
+
+
+
+
