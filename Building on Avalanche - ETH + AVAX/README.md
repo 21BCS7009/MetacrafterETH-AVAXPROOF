@@ -41,7 +41,7 @@ The DegenToken contract is an ERC20 token smart contract that enables various fu
 
 ### Functions
 
-### Mint
+### Mint_Token
 
 ```solidity
 function Mint_Token(address to, uint256 amount) public onlyOwner
@@ -49,7 +49,7 @@ function Mint_Token(address to, uint256 amount) public onlyOwner
 
 The `Mint_Token` function allows the contract owner to create new tokens and distribute them to specified addresses. It takes two parameters: `to` (the recipient's address) and `amount` (the number of tokens to mint). Only the contract owner can call this function.
 
-### transferTokens
+### Transfer_Tokens
 
 ```solidity
 function Transfer_Tokens(address _receiver, uint amount) external
@@ -57,7 +57,7 @@ function Transfer_Tokens(address _receiver, uint amount) external
 
 The `Transfer_Tokens` function enables players to transfer their tokens to others. Players can initiate transfers by providing the recipient's address (`_receiver`) and the amount of tokens (`amount`) to transfer. This function requires that the caller has a sufficient balance of tokens.
 
-### checkBalance
+### Check_Balance
 
 ```solidity
 function Check_Balance() external view returns (uint)
@@ -65,7 +65,7 @@ function Check_Balance() external view returns (uint)
 
 The `Check_Balance` function allows players to check their token balance at any time. It returns the balance of tokens held by the caller's address.
 
-### burnTokens
+### Burn_Tokens
 
 ```solidity
 function Burn_Tokens(uint amount) external
@@ -73,7 +73,7 @@ function Burn_Tokens(uint amount) external
 
 The `Burn_Tokens` function enables any token holder to burn their own tokens if they are no longer needed. Token holders can specify the amount of tokens (`amount`) they wish to burn. The function requires that the caller has a sufficient balance of tokens.
 
-### gameStore
+### Game_Store
 
 ```solidity
 function Game_Store() public pure returns (string memory)
@@ -81,7 +81,7 @@ function Game_Store() public pure returns (string memory)
 
 The `Game_Store` function provides information about the available items in the in-game store. It returns a string with the options and their corresponding values. Players can choose from these items to redeem with their tokens.
 
-### redeemTokens
+### RedeemTokens
 
 ```solidity
 function RedeemTokens(uint choice) external payable
