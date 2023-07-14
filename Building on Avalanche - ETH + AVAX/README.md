@@ -4,9 +4,6 @@
 
 Before running the smart contract, make sure you have the following prerequisites installed:
 
-- Solidity compiler (version 0.8.0)
-- Ethereum development environment (e.g., Remix, Truffle, Hardhat)
-
 ## Getting Started
 
 Follow the steps below to get started with the `DegenToken` smart contract:
@@ -44,53 +41,53 @@ The DegenToken contract is an ERC20 token smart contract that enables various fu
 
 ### Functions
 
-### mint
+### Mint
 
 ```solidity
-function mint(address to, uint256 amount) public onlyOwner
+function Mint_Token(address to, uint256 amount) public onlyOwner
 ```
 
-The `mint` function allows the contract owner to create new tokens and distribute them to specified addresses. It takes two parameters: `to` (the recipient's address) and `amount` (the number of tokens to mint). Only the contract owner can call this function.
+The `Mint_Token` function allows the contract owner to create new tokens and distribute them to specified addresses. It takes two parameters: `to` (the recipient's address) and `amount` (the number of tokens to mint). Only the contract owner can call this function.
 
 ### transferTokens
 
 ```solidity
-function transferTokens(address _receiver, uint amount) external
+function Transfer_Tokens(address _receiver, uint amount) external
 ```
 
-The `transferTokens` function enables players to transfer their tokens to others. Players can initiate transfers by providing the recipient's address (`_receiver`) and the amount of tokens (`amount`) to transfer. This function requires that the caller has a sufficient balance of tokens.
+The `Transfer_Tokens` function enables players to transfer their tokens to others. Players can initiate transfers by providing the recipient's address (`_receiver`) and the amount of tokens (`amount`) to transfer. This function requires that the caller has a sufficient balance of tokens.
 
 ### checkBalance
 
 ```solidity
-function checkBalance() external view returns (uint)
+function Check_Balance() external view returns (uint)
 ```
 
-The `checkBalance` function allows players to check their token balance at any time. It returns the balance of tokens held by the caller's address.
+The `Check_Balance` function allows players to check their token balance at any time. It returns the balance of tokens held by the caller's address.
 
 ### burnTokens
 
 ```solidity
-function burnTokens(uint amount) external
+function Burn_Tokens(uint amount) external
 ```
 
-The `burnTokens` function enables any token holder to burn their own tokens if they are no longer needed. Token holders can specify the amount of tokens (`amount`) they wish to burn. The function requires that the caller has a sufficient balance of tokens.
+The `Burn_Tokens` function enables any token holder to burn their own tokens if they are no longer needed. Token holders can specify the amount of tokens (`amount`) they wish to burn. The function requires that the caller has a sufficient balance of tokens.
 
 ### gameStore
 
 ```solidity
-function gameStore() public pure returns (string memory)
+function Game_Store() public pure returns (string memory)
 ```
 
-The `gameStore` function provides information about the available items in the in-game store. It returns a string with the options and their corresponding values. Players can choose from these items to redeem with their tokens.
+The `Game_Store` function provides information about the available items in the in-game store. It returns a string with the options and their corresponding values. Players can choose from these items to redeem with their tokens.
 
 ### redeemTokens
 
 ```solidity
-function redeemTokens(uint choice) external payable
+function RedeemTokens(uint choice) external payable
 ```
 
-The `redeemTokens` function allows players to redeem tokens for items in the in-game store. Players need to provide the `choice` parameter, representing the sequence number of the desired item to redeem. The function checks the player's token balance and verifies if it is sufficient for the selected item. If the conditions are met, it transfers the corresponding token value to the contract owner.
+The `RedeemTokens` function allows players to redeem tokens for items in the in-game store. Players need to provide the `choice` parameter, representing the sequence number of the desired item to redeem. The function checks the player's token balance and verifies if it is sufficient for the selected item. If the conditions are met, it transfers the corresponding token value to the contract owner.
 
 
 ## License
