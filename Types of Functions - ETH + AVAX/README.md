@@ -31,4 +31,4 @@ This project is licensed under the MIT License. See the [LICENCE](https://github
 
 ## Credits
 
-This project is a solution to the project task provided by MetaCrafters.
+This project is a solution of the project task provided by MetaCrafters.
