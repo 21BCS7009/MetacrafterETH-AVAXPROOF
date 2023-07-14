@@ -1,4 +1,3 @@
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
@@ -11,44 +10,43 @@ contract DegenToken is ERC20, Ownable, ERC20Burnable {
 
     constructor() ERC20("Degen", "DGN") {}
 
-        function mint(address to, uint256 amount) public onlyOwner{
+        function Mint_Token(address to, uint256 amount) public onlyOwner{
             _mint(to, amount);
         }
-        function transferTokens(address _reciever, uint amount) external{
-            require(balanceOf(msg.sender) >= amount, "you are not owner");
+        function Transfer_Tokens(address _reciever, uint amount) external{
+            require(balanceOf(msg.sender) >= amount, "you are not Owner");
             approve(msg.sender, amount);
             transferFrom(msg.sender, _reciever, amount);
         }
-        function checkBalance() external view returns(uint){
+        function Check_Balance() external view returns(uint){
            return balanceOf(msg.sender);
         }
-        function burnTokens(uint amount) external{
+        function Burn_Tokens(uint amount) external{
             require(balanceOf(msg.sender)>= amount, "You do not have enough Tokens");
             _burn(msg.sender, amount);
         }
-        function gameStore() public pure returns(string memory) {
-            return "1. ProPlayer NFT value = 200 \n 2. SuperNinja value = 100 /n 3. DegenCap value = 75";
+        function Game_Store() public pure returns(string memory) {
+            return "1. ProPlayer NFT value = 1000 \n 2. SuperNinja value = 200 /n 3. DegenCap value = 300";
         }
-        function reedemTokens(uint choice) external payable{
-            require(choice<=3,"Invalid selection");
+        function ReedemTokens(uint choice) external payable{
+            require(choice<=3,"Selection Is Invalid ");
             if(choice ==1){
-                require(balanceOf(msg.sender)>=200, "Insufficient Balance");
-                approve(msg.sender, 200);
-                transferFrom(msg.sender, owner(), 200);
-            }
-            else if(choice ==2){
-                require(balanceOf(msg.sender)>=100, "Insufficient Balance");
+                require(balanceOf(msg.sender)>=100, "You do not have enough Balance");
                 approve(msg.sender, 100);
                 transferFrom(msg.sender, owner(), 100);
             }
+            else if(choice ==2){
+                require(balanceOf(msg.sender)>=200, "You do not have enough Balance");
+                approve(msg.sender, 200);
+                transferFrom(msg.sender, owner(), 200);
+            }
             else{
-                require(balanceOf(msg.sender)>=75, "Insufficient Balance");
-                approve(msg.sender, 75);
-                transferFrom(msg.sender, owner(), 75);
+                require(balanceOf(msg.sender)>=300, "You do not have enough Balance");
+                approve(msg.sender, 300);
+                transferFrom(msg.sender, owner(), 300);
             }
 
 
         }
 
 }
-
