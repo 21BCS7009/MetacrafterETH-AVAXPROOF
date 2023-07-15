@@ -52,7 +52,7 @@ The `Mint_Token` function allows the contract owner to create new tokens and dis
 ### Transfer_Tokens
 
 ```solidity
-function Transfer_Tokens(address _receiver, uint amount) external
+function Transfer_Tokens(address _receiver, uint256 amount) external
 ```
 
 The `Transfer_Tokens` function enables players to transfer their tokens to others. Players can initiate transfers by providing the recipient's address (`_receiver`) and the amount of tokens (`amount`) to transfer. This function requires that the caller has a sufficient balance of tokens.
@@ -60,7 +60,7 @@ The `Transfer_Tokens` function enables players to transfer their tokens to other
 ### Check_Balance
 
 ```solidity
-function Check_Balance() external view returns (uint)
+function Check_Balance() external view returns (uint256)
 ```
 
 The `Check_Balance` function allows players to check their token balance at any time. It returns the balance of tokens held by the caller's address.
@@ -68,7 +68,7 @@ The `Check_Balance` function allows players to check their token balance at any 
 ### Burn_Tokens
 
 ```solidity
-function Burn_Tokens(uint amount) external
+function Burn_Tokens(uint256 amount) external
 ```
 
 The `Burn_Tokens` function enables any token holder to burn their own tokens if they are no longer needed. Token holders can specify the amount of tokens (`amount`) they wish to burn. The function requires that the caller has a sufficient balance of tokens.
@@ -84,7 +84,7 @@ The `Game_Store` function provides information about the available items in the 
 ### RedeemTokens
 
 ```solidity
-function RedeemTokens(uint choice) external payable
+function RedeemTokens(uint256 choice) external payable
 ```
 
 The `RedeemTokens` function allows players to redeem tokens for items in the in-game store. Players need to provide the `choice` parameter, representing the sequence number of the desired item to redeem. The function checks the player's token balance and verifies if it is sufficient for the selected item. If the conditions are met, it transfers the corresponding token value to the contract owner.
